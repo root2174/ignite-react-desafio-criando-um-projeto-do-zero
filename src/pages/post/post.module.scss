@@ -8,7 +8,24 @@
   }
 }
 
+.title {
+  font-size: 2rem;
+}
+
+.content {
+  h2 {
+    margin: 2rem 0;
+    font-size: 2rem;
+  }
+
+  p {
+    margin: 1rem 0;
+    line-height: 25.2px;
+  }
+}
+
 .info {
+  margin: 1rem 0 3rem 0;
   display: flex;
   color: var(--grey-300);
   font-size: 1rem;

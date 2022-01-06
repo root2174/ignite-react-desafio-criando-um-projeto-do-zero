@@ -60,23 +60,25 @@ export default function Post({ post }: PostProps): JSX.Element {
       <div className={styles.container}>
         <img src={post.data.banner.url} alt="banner" />
         <article>
-          <h1>{post.data.title}</h1>
-          <div className={styles.info}>
-            <time className={styles.infoContent}>
-              <FiCalendar size={20} />
-              {getDate(post.first_publication_date)}
-            </time>
-            <span className={styles.infoContent}>
-              <FiUser size={20} />
-              {post.data.author}
-            </span>
-            <span className={styles.infoContent}>
-              <FiClock size={20} />
-              {getReadingTime()}
-            </span>
+          <div className={styles.header}>
+            <h1 className={styles.title}>{post.data.title}</h1>
+            <div className={styles.info}>
+              <time className={styles.infoContent}>
+                <FiCalendar size={20} />
+                {getDate(post.first_publication_date)}
+              </time>
+              <span className={styles.infoContent}>
+                <FiUser size={20} />
+                {post.data.author}
+              </span>
+              <span className={styles.infoContent}>
+                <FiClock size={20} />
+                {getReadingTime()}
+              </span>
+            </div>
           </div>
           {post.data.content.map(content => (
-            <div key={content.heading}>
+            <div className={styles.content} key={content.heading}>
               <h2>{content.heading}</h2>
               <p
                 dangerouslySetInnerHTML={{
