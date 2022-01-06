@@ -1,1 +1,32 @@
-// TODO
+.container {
+  max-width: 1120px;
+  margin: 0 auto;
+  img {
+    width: 100%;
+    height: 400px;
+    object-fit: contain;
+  }
+}
+
+.info {
+  display: flex;
+  color: var(--grey-300);
+  font-size: 1rem;
+
+  time {
+    margin-right: 2rem;
+  }
+
+  span + span {
+    margin-left: 2rem;
+  }
+
+  .infoContent {
+    display: flex;
+    align-items: center;
+
+    svg {
+      margin-right: 0.5rem;
+    }
+  }
+}
