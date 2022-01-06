@@ -1,1 +1,52 @@
-// TODO
+.container {
+  max-width: 1120px;
+  margin: 0 auto;
+
+  .logo {
+    padding: 4rem 0;
+  }
+
+  .post {
+    width: max-content;
+
+    & + div {
+      margin-top: 2rem;
+    }
+
+    .subtitle {
+      margin: 0.8rem 0;
+    }
+
+    .footer {
+      display: flex;
+      color: var(--grey-300);
+      font-size: 1rem;
+
+      time {
+        margin-right: 1rem;
+      }
+
+      .footerContent {
+        display: flex;
+        align-items: center;
+
+        svg {
+          margin-right: 0.5rem;
+        }
+      }
+    }
+  }
+
+  .loadMore {
+    background: none !important;
+    border: none;
+    padding: 0 !important;
+    font-family: 'Inter', sans-serif;
+    font-weight: bold;
+    color: var(--pink-300);
+    cursor: pointer;
+    font-size: 1.125rem;
+
+    margin-top: 4rem;
+  }
+}
